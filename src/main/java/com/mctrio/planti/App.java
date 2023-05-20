@@ -6,6 +6,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import com.fazecast.jSerialComm.*;
+import com.mctrio.planti.conection.bluetooth.ServicesSearch;
 import javax.bluetooth.*;
 import java.io.IOException;
 import java.util.Arrays;
@@ -53,5 +54,8 @@ public class App extends Application {
         } catch (Exception e) {
             //log.error("MEK", e);
         }
+        ServicesSearch a = new ServicesSearch();
+        //a.scan();
+        a.connect();
     }
 }
